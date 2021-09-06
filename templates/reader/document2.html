@@ -1,0 +1,19 @@
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <body>
+            <title>
+                Document Reader
+            </title>
+            {{document}}
+            <hr>
+            <p>
+                {{document.description | linebreaks}}
+            </p>
+            <hr>
+            <img src="{{document.image.path}}" height="200px">
+            <br>
+            Image Title: {{document.image}}
+        </body>
+    </head>
+</html>

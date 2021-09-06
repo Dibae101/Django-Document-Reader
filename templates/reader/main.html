@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+documents
+{% endblock title %}
+
+{% block content %}
+<br>
+    {% for document in object_list %}
+        {{document}}
+        <a href="{% url 'reader:pdf-viewer' document.pk %}"><button class="btn btn-primary">View Document Reader</button></a>
+        <br>
+        <hr>
+        <br>
+    {% endfor %}
+{% endblock content %}
